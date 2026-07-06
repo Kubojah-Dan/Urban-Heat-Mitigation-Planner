@@ -1,0 +1,5 @@
+# Exploration & validation notebooks (one per phase).
+# Phase 0: 00_gee_connection_test.ipynb
+# Phase 1: 01_data_collection_eda.ipynb
+# Phase 2: 02_feature_engineering.ipynb
+# Phase 3: 03_modeling_analysis.ipynb

@@ -1,0 +1,3 @@
+# Ward or fallback 250m-grid polygon geometries (Shapefile / GeoJSON).
+# Drop Ahmedabad_Ward_Boundaries.shp / .geojson here before running Phase 1.
+# If empty, Phase 1 will auto-generate a 250m uniform grid as fallback.

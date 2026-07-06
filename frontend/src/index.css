@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base custom resets & animations */
+body, html {
+  background-color: #09090b;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-sans);
+}
+
+/* Custom glow text effects */
+.glow-text-cyan {
+  text-shadow: 0 0 12px rgba(6, 182, 212, 0.5);
+}
+
+.glow-text-orange {
+  text-shadow: 0 0 12px rgba(249, 115, 22, 0.5);
+}
+
+.glow-text-rose {
+  text-shadow: 0 0 12px rgba(244, 63, 94, 0.5);
+}
+
+/* Animation classes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.985); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar design (Glass style) */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.08);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6,182,212,0.3);
+}
+
+/* Interactive slider track customization overrides for WebKit */
+input[type=range]::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  height: 4px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -6px;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+/* ── Leaflet Map Dark Mode Customization ── */
+.leaflet-container {
+  background: #09090b !important;
+  font-family: var(--font-sans) !important;
+}
+
+.dark-tiles {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+.leaflet-bar {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+}
+
+.leaflet-bar a {
+  background-color: #18181b !important;
+  color: #f4f4f5 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  transition: all 0.2s;
+}
+
+.leaflet-bar a:hover {
+  background-color: #06b6d4 !important;
+  color: #fff !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(24, 24, 27, 0.9) !important;
+  color: #f4f4f5 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(8px);
+}
+
+.leaflet-popup-tip {
+  background: rgba(24, 24, 27, 0.9) !important;
+}
+
+.map-container-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
